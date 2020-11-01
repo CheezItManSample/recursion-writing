@@ -75,8 +75,8 @@ def digit_match(n, m)
   return digit_match(n % 10, m % 10) + digit_match( n / 10, m / 10)
 end
 
-# Time complexity: O(2^n) - i looked this up
-# Space Complexity: O(2^n)
+# Time complexity: O(2^n) / exponential - i had to looked this up
+# Space Complexity: O(n)
 def fib(n)
   raise ArgumentError, "n cannot be negative" if n < 0
   return n if n == 0 || n == 1
