@@ -3,7 +3,7 @@
 # Time complexity: O(n)
 # Space complexity: O(n)
 def factorial(n)
-  raise ArgumentError, "n is less than 0" if n < 0
+  raise ArgumentError, "n cannot be negative" if n < 0
   return 1 if n == 0
   return n * factorial(n - 1)
 end
@@ -78,6 +78,7 @@ end
 # Time complexity: O(2^n) - i looked this up
 # Space Complexity: O(2^n)
 def fib(n)
-  return n if n <= 1
+  raise ArgumentError, "n cannot be negative" if n < 0
+  return n if n == 0 || n == 1
   return fib(n - 1) + fib(n - 2)
 end
